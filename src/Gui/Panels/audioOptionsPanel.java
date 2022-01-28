@@ -1,6 +1,7 @@
 package Gui.Panels;
 
 import Compressor.ffmpeg;
+import Gui.Frames.errorFrame;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -109,6 +110,8 @@ public class audioOptionsPanel extends JPanel implements ActionListener {
                 compressor.setAudioBitRate(bitRate);
 
             } catch(Exception err) {
+
+                errorFrame errorWindow = new errorFrame();
 
                 sampleRateInput.setEnabled(true);
                 bitRateInput.setEnabled(true);

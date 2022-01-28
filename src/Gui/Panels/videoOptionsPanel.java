@@ -1,6 +1,7 @@
 package Gui.Panels;
 
 import Compressor.ffmpeg;
+import Gui.Frames.errorFrame;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -150,7 +151,7 @@ public class videoOptionsPanel extends JPanel implements ActionListener {
 
             } catch(Exception err) {
 
-                System.out.println("There has been an issue.");
+                errorFrame errorWindow = new errorFrame();
 
                 widthInput.setEnabled(true);
                 heightInput.setEnabled(true);
